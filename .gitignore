@@ -22,3 +22,4 @@ dist/
 
 # Exclude the root pictures folder
 /pictures/
+.vercel
