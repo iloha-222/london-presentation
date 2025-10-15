@@ -1,0 +1,24 @@
+# Large image files
+*.tif
+*.HEIC
+*.heic
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build outputs
+dist/
+.astro/
+
+# IDE
+.vscode/
+.idea/
+
+# Exclude the root pictures folder
+/pictures/
