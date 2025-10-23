@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/presentation-complete.html"
+      "dest": "/presentation-complete-v2.html"
     }
   ]
 }
