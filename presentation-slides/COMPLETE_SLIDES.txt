@@ -1,0 +1,153 @@
+
+INSTRUCTIONS: Copy all the content below and paste it into src/pages/index.astro
+BEFORE the closing </PresentationLayout> tag (after Slide 2).
+
+================================================================
+
+	<!-- SLIDE 3: Tibetan Buddhist Art as Teaching -->
+	<section class="slide py-20 md:py-32 bg-white">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="grid lg:grid-cols-2 gap-12 items-center">
+				<div class="relative">
+					<div class="rounded-[12px] overflow-hidden border-4 border-[#f5b611]">
+						<img src="/pictures/Yab Yum.jpg" alt="Yab-Yum deity figure" class="w-full h-full object-cover aspect-[4/3]" />
+					</div>
+				</div>
+				<div>
+					<div class="text-xs font-[Cabin] font-bold tracking-[0.21em] text-[#d45c26] uppercase mb-4">
+						Why Art Matters
+					</div>
+					<h2 class="text-4xl md:text-5xl font-[Cabin] font-bold text-[#453c36] mb-6 leading-tight">
+						The Dharma Has Always Been Transmitted Visually
+					</h2>
+					<p class="text-lg text-[#453c36] opacity-80 leading-relaxed mb-6">
+						The Tibetan Buddhist tradition has an unusually large output of sacred art. This isn't because we like decoration—it's because images are vehicles for study, for contemplation, for realization.
+					</p>
+					<p class="text-lg text-[#453c36] opacity-80 leading-relaxed mb-6">
+						When a young monk learns about Avalokiteshvara, the embodiment of compassion, he's not just reading about compassion as an abstract concept. He's studying the iconography: the thousand arms reaching out to help beings, the eleven heads representing different levels of awareness, the specific hand gestures and implements.
+					</p>
+					<p class="text-lg font-[Cabin] font-semibold text-[#453c36] leading-relaxed">
+						The image teaches in ways that words cannot.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SLIDE 4: LunARC -->
+	<section class="slide relative min-h-screen flex items-center overflow-hidden bg-black">
+		<div class="absolute inset-0 z-0">
+			<img src="/pictures/Earth from Space.jpg" alt="Earth from space" class="w-full h-full object-cover opacity-60" />
+		</div>
+		<div class="relative z-10 max-w-5xl mx-auto px-6 py-20 w-full text-center">
+			<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5b611] bg-opacity-30 border-2 border-[#f5b611] mb-8">
+				<span class="text-xs font-[Cabin] font-bold tracking-[0.21em] text-white uppercase">March 2025</span>
+			</div>
+			<h2 class="text-4xl md:text-5xl lg:text-6xl font-[Cabin] font-bold text-white mb-8 leading-tight drop-shadow-lg">
+				A Question Beyond Borders: The Lunar Mission Story
+			</h2>
+			<div class="max-w-3xl mx-auto bg-[#453c36] bg-opacity-80 rounded-[12px] p-8 md:p-12">
+				<p class="text-xl md:text-2xl text-white leading-relaxed mb-6">
+					SINI participated in LunARC, sending sacred Buddhist art to the moon on a hard drive that will last for a billion years.
+				</p>
+				<p class="text-lg text-white opacity-90 leading-relaxed mb-6">
+					This was about saying: space belongs to everyone, the future belongs to everyone, not just wealthy nations, not just space agencies.
+				</p>
+				<p class="text-lg text-white opacity-90 leading-relaxed font-medium">
+					If we can think about preserving art for a billion years on the moon, if we can think about these objects as belonging to humanity rather than to any single nation—doesn't that change the conversation we're having about museum collections?
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- SLIDE 5: Overview Effect -->
+	<section class="slide py-20 md:py-32 bg-gradient-to-br from-[#9ed7c7] via-[#f5b611] to-[#d45c26] relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10">
+			<img src="/illustrations/mandala-1.webp" alt="" class="w-full h-full object-cover" />
+		</div>
+		<div class="absolute inset-0 bg-black opacity-20"></div>
+		<div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+			<div class="w-24 h-24 mx-auto mb-8">
+				<img src="/icons/noun-earth-globe-5717692.svg" alt="" class="w-full h-full" style="filter: brightness(0) invert(1);" />
+			</div>
+			<h2 class="text-3xl md:text-4xl font-[Cabin] font-bold text-white mb-8 leading-tight drop-shadow-lg">
+				The Overview Effect
+			</h2>
+			<p class="text-xl md:text-2xl text-white leading-relaxed font-medium drop-shadow-lg mb-8">
+				When you see the Earth from space, you can't see the borders between countries. You just see this fragile, beautiful blue planet, and you understand in your bones that we're all connected, that we share one home, one interconnected ecosystem.
+			</p>
+			<p class="text-lg md:text-xl text-white leading-relaxed drop-shadow-lg">
+				Can we expand the question? Not replacing "who owns this?" but adding: "How can this serve everyone? How can these collections become resources for living communities while also fulfilling museums' educational missions?"
+			</p>
+		</div>
+	</section>
+
+	<!-- SLIDE 6: The Knowledge Gap -->
+	<section class="slide py-20 md:py-32 bg-[#f9f2e6]">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<div class="text-xs font-[Cabin] font-bold tracking-[0.21em] text-[#d45c26] uppercase mb-4">The Challenge</div>
+				<h2 class="text-4xl md:text-5xl font-[Cabin] font-bold text-[#453c36] mb-6 leading-tight">The Knowledge Gap</h2>
+			</div>
+			<div class="grid lg:grid-cols-2 gap-12 items-start">
+				<div class="bg-white rounded-[12px] p-8 md:p-10 border-4 border-[#9ed7c7]">
+					<div class="w-16 h-16 mb-6">
+						<img src="/icons/noun-reading-3504539.svg" alt="" class="w-full h-full" style="filter: invert(87%) sepia(13%) saturate(1026%) hue-rotate(106deg) brightness(92%) contrast(92%);" />
+					</div>
+					<h3 class="text-2xl font-[Cabin] font-bold text-[#453c36] mb-6">Traditional Monastic Education</h3>
+					<div class="space-y-4">
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#9ed7c7] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">15-25 years of study to become a geshe</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#9ed7c7] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Master logic, epistemology, metaphysics, ethics</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#9ed7c7] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Study ritual, meditation, tantric practices</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#9ed7c7] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Comprehensive, holistic education refined over centuries</p>
+						</div>
+					</div>
+					<div class="mt-8 pt-8 border-t-2 border-[#9ed7c7] border-opacity-30">
+						<p class="text-[#453c36] font-semibold mb-3">Not typically included:</p>
+						<p class="text-[#453c36] opacity-80">Art history, material culture studies, conservation science, archival methods</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-[12px] p-8 md:p-10 border-4 border-[#d45c26]">
+					<div class="w-16 h-16 mb-6">
+						<img src="/icons/noun-exhibition-7861909.svg" alt="" class="w-full h-full" style="filter: invert(34%) sepia(61%) saturate(1095%) hue-rotate(338deg) brightness(95%) contrast(88%);" />
+					</div>
+					<h3 class="text-2xl font-[Cabin] font-bold text-[#453c36] mb-6">Museum Resources</h3>
+					<div class="space-y-4">
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#d45c26] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Rare manuscripts not available anywhere else</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#d45c26] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Historical objects documenting how practices evolved</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#d45c26] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Research databases with detailed provenance</p>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-2 h-2 rounded-full bg-[#d45c26] flex-shrink-0 mt-2"></div>
+							<p class="text-[#453c36] opacity-90">Conservation knowledge about preserving materials</p>
+						</div>
+					</div>
+					<div class="mt-8 pt-8 border-t-2 border-[#d45c26] border-opacity-30">
+						<p class="text-[#453c36] font-semibold mb-3">The challenge:</p>
+						<p class="text-[#453c36] opacity-80">These two worlds rarely connect—no common language, no shared framework</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+Continue in next message due to length...

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SINI End of Year Tea Party - December 9, 2026</title>
+    <title>SINI End of Year Tea Party - December 9, 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -77,6 +77,24 @@
             width: 28mm;
             margin: 0 auto 8mm;
             display: block;
+        }
+
+        .photos-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3mm;
+            margin-bottom: 8mm;
+            width: 100%;
+        }
+
+        .photo-strip-item {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(69, 60, 54, 0.15);
         }
 
         .badge {
@@ -289,26 +307,10 @@
         .message-box {
             background: white;
             border-radius: 10px;
-            padding: 0;
+            padding: 8mm;
             margin-bottom: 15mm;
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 40% 60%;
-            min-height: 60mm;
             box-shadow: 0 2px 8px rgba(69, 60, 54, 0.08);
-        }
-
-        .message-illustration {
-            background-image: url('illustrations (full illustrations, no transparent background)/illustrations-full/a-tibetan-nunnery.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .message-content {
-            padding: 12mm 10mm;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         .message-title {
@@ -316,14 +318,36 @@
             font-weight: 700;
             font-size: 14pt;
             color: #453c36;
+            margin-bottom: 6mm;
+            text-align: center;
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3mm;
             margin-bottom: 5mm;
         }
 
-        .message-text {
-            font-size: 9pt;
-            color: #453c36;
-            line-height: 1.5;
-            opacity: 0.85;
+        .photo-item {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .message-illustration {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 3mm;
+        }
+
+        .message-illustration img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .photo-section {
@@ -377,6 +401,44 @@
         .email-link:hover {
             opacity: 0.8;
         }
+
+        .page-1-photo-section {
+            background: white;
+            border: 2px solid #f5b611;
+            border-radius: 8px;
+            padding: 6mm;
+            margin-bottom: 8mm;
+            text-align: left;
+        }
+
+        .page-1-action-badge {
+            display: inline-block;
+            background: #f5b611;
+            color: white;
+            padding: 1.5mm 5mm;
+            border-radius: 15px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 4mm;
+        }
+
+        .page-1-photo-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 11pt;
+            color: #453c36;
+            margin-bottom: 3mm;
+        }
+
+        .page-1-photo-text {
+            font-size: 8.5pt;
+            color: #453c36;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
     </style>
 </head>
 <body>
@@ -384,6 +446,13 @@
     <div class="page page-1">
         <div class="page-1-content">
             <img src="icons/SINI orange.webp" alt="SINI Logo" class="logo">
+
+            <div class="photos-strip">
+                <div class="photo-strip-item" style="background-image: url('photos/photo1.jpg');"></div>
+                <div class="photo-strip-item" style="background-image: url('photos/photo2.jpg');"></div>
+                <div class="photo-strip-item" style="background-image: url('photos/photo3.jpg');"></div>
+                <div class="photo-strip-item" style="background-image: url('photos/photo4.jpg');"></div>
+            </div>
 
             <div class="badge">
                 <span class="badge-text">You're Invited</span>
@@ -396,12 +465,20 @@
                 Join us for a special celebration as we come together to connect, share, and reflect. Many of us are connected to SINI in different spheres: this is our opportunity to meet and celebrate the wonderful team working on building bridges in so many ways.
             </p>
 
+            <div class="page-1-photo-section">
+                <div class="page-1-action-badge">📸 Before the Meeting</div>
+                <div class="page-1-photo-title">Share a Meaningful Moment</div>
+                <p class="page-1-photo-text">
+                    Please share a photo from this past year that was meaningful or joyful to you. Send your photo to <a href="mailto:laurane.boulenger@sinibridge.org" class="email-link">laurane.boulenger@sinibridge.org</a>
+                </p>
+            </div>
+
             <a href="https://us02web.zoom.us/j/81622023662?pwd=wbgaw1cRTT5CzLIbGjDKrXeCoeqEFC.1" class="zoom-pill">Join Zoom Meeting</a>
 
             <div class="date-card">
                 <img src="icons/noun-calendar-4059053.svg" alt="Calendar" class="date-icon">
                 <div class="date-main">Tuesday, December 9th</div>
-                <div class="date-year">2026</div>
+                <div class="date-year">2025</div>
                 <div class="timezone-grid">
                     <div class="timezone-item">
                         <div class="timezone-time">8:30 PM</div>
@@ -445,22 +522,9 @@
             </div>
 
             <div class="message-box">
-                <div class="message-illustration"></div>
-                <div class="message-content">
-                    <div class="message-title">A Time to Connect & Celebrate</div>
-                    <p class="message-text">
-                        This gathering brings our international and Tibetan staff together to share stories and celebrate our meaningful work. We'll have time for introductions and reflecting on what gives us hope as we continue this important work of cultural preservation and education.
-                    </p>
-                </div>
-            </div>
-
-            <div class="photo-section">
-                <div class="action-badge">📸 Before the Meeting</div>
-                <div class="photo-content">
-                    <div class="photo-title">Share a Meaningful Moment</div>
-                    <p class="photo-text">
-                        Please share a photo from this past year that was meaningful or joyful to you. It can be anything: a moment from your work, a personal milestone, a beautiful scene, or something that brought you joy. We'll create a collage to share during our gathering. Send your photo to <a href="mailto:laurane.boulenger@sinibridge.org" class="email-link">laurane.boulenger@sinibridge.org</a>
-                    </p>
+                <div class="message-title">A Time to Connect & Celebrate</div>
+                <div class="message-illustration">
+                    <img src="photos/illustration.jpg" alt="Building bridges together">
                 </div>
             </div>
         </div>

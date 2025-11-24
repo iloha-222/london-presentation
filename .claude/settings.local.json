@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm install)",
+      "Bash(open \"/Users/lauraneboulenger/my-clients-projects/sini-websites/Presentation in London/presentation-complete-v2.html\")",
+      "Bash(find \"/Users/lauraneboulenger/my-clients-projects/sini-websites/Presentation in London\" -type f ( -name \"*broken*\" -o -name \"*fix*\" -o -name \"*repair*\" ))",
+      "Bash(open:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright install:*)",
+      "Bash(node screenshot-design.js:*)",
+      "Bash(node export-png.js:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(vercel --prod)",
+      "Bash(awk:*)",
+      "Bash(node optimize-images.js:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(textutil:*)",
+      "Bash(node convert-to-pdf.js:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

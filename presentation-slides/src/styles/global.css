@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-burnt-orange: #d45c26;
+  --color-golden: #f5b611;
+  --color-brown: #a06a32;
+  --color-green: #5ea85f;
+  --color-mint: #9ed7c7;
+  --color-sand: #f0e1ca;
+  --color-light-beige: #f9f2e6;
+  --color-off-white: #fbf9f7;
+  --color-dark-brown: #453c36;
+
+  --font-family-lora: 'Lora', Georgia, serif;
+  --font-family-cabin: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-lora);
+  font-size: 18px;
+  color: #453c36;
+  background-color: #f9f2e6;
+}
+
+/* Slide-specific styles */
+.slide {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
