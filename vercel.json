@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/presentation-complete-v2.html"
+      "dest": "/zoom-flyer/invitation.html"
     }
   ]
 }

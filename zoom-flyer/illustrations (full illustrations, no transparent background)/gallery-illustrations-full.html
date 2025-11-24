@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Illustrations Complètes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        .image-name {
+            padding: 15px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie Illustrations Complètes</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="illustrations-full/Bridge.png" alt="Illustration 1" onclick="openLightbox(this.src)">
+            <div class="image-name">Bridge.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-detailed-flower-mandala-made-2.png" alt="Illustration 2" onclick="openLightbox(this.src)">
+            <div class="image-name">a-detailed-flower-mandala-made-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-detailed-flower-mandala-made.png" alt="Illustration 3" onclick="openLightbox(this.src)">
+            <div class="image-name">a-detailed-flower-mandala-made.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-quiet-moment-during-monsoon.png" alt="Illustration 4" onclick="openLightbox(this.src)">
+            <div class="image-name">a-quiet-moment-during-monsoon.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-sacred-tibetan-buddhist-painting-2.png" alt="Illustration 5" onclick="openLightbox(this.src)">
+            <div class="image-name">a-sacred-tibetan-buddhist-painting-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-sacred-tibetan-buddhist-painting.png" alt="Illustration 6" onclick="openLightbox(this.src)">
+            <div class="image-name">a-sacred-tibetan-buddhist-painting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-serene-buddhist-institute-in.png" alt="Illustration 7" onclick="openLightbox(this.src)">
+            <div class="image-name">a-serene-buddhist-institute-in.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-tibetan-buddhist-temple.png" alt="Illustration 8" onclick="openLightbox(this.src)">
+            <div class="image-name">a-tibetan-buddhist-temple.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-tibetan-nun-making-an.png" alt="Illustration 9" onclick="openLightbox(this.src)">
+            <div class="image-name">a-tibetan-nun-making-an.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-tibetan-nunnery-2.png" alt="Illustration 10" onclick="openLightbox(this.src)">
+            <div class="image-name">a-tibetan-nunnery-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-tibetan-nunnery.png" alt="Illustration 11" onclick="openLightbox(this.src)">
+            <div class="image-name">a-tibetan-nunnery.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/a-tibetan-thangka-hanging-on-a-wall-sref.png" alt="Illustration 12" onclick="openLightbox(this.src)">
+            <div class="image-name">a-tibetan-thangka-hanging-on-a-wall-sref.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/altar-tibetan-buddhism.png" alt="Illustration 13" onclick="openLightbox(this.src)">
+            <div class="image-name">altar-tibetan-buddhism.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/altar.png" alt="Illustration 14" onclick="openLightbox(this.src)">
+            <div class="image-name">altar.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/bodhgaya-bird-view-soft-lighting-sref.png" alt="Illustration 15" onclick="openLightbox(this.src)">
+            <div class="image-name">bodhgaya-bird-view-soft-lighting-sref.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/bodhgaya-ceremonies-soft-lighting-3.png" alt="Illustration 16" onclick="openLightbox(this.src)">
+            <div class="image-name">bodhgaya-ceremonies-soft-lighting-3.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/certificate-scroll-for-teacher-training.png" alt="Illustration 17" onclick="openLightbox(this.src)">
+            <div class="image-name">certificate-scroll-for-teacher-training.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/chrysanthemum-single-bloom-digital-asset.png" alt="Illustration 18" onclick="openLightbox(this.src)">
+            <div class="image-name">chrysanthemum-single-bloom-digital-asset.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/conch-shell-ritual-trumpet-digital.png" alt="Illustration 19" onclick="openLightbox(this.src)">
+            <div class="image-name">conch-shell-ritual-trumpet-digital.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/dehradun-tibetan-buddhist-temple-2.png" alt="Illustration 20" onclick="openLightbox(this.src)">
+            <div class="image-name">dehradun-tibetan-buddhist-temple-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/dehradun-tibetan-buddhist-temple.png" alt="Illustration 21" onclick="openLightbox(this.src)">
+            <div class="image-name">dehradun-tibetan-buddhist-temple.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/dharmachakra-wheel-2.png" alt="Illustration 22" onclick="openLightbox(this.src)">
+            <div class="image-name">dharmachakra-wheel-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/dharmachakra-wheel.png" alt="Illustration 23" onclick="openLightbox(this.src)">
+            <div class="image-name">dharmachakra-wheel.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/donation-envelope-sealed-digital-asset.png" alt="Illustration 24" onclick="openLightbox(this.src)">
+            <div class="image-name">donation-envelope-sealed-digital-asset.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/earth-from-space.png" alt="Illustration 25" onclick="openLightbox(this.src)">
+            <div class="image-name">earth-from-space.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/eurasian-hoopoe.png" alt="Illustration 26" onclick="openLightbox(this.src)">
+            <div class="image-name">eurasian-hoopoe.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/flowers.png" alt="Illustration 27" onclick="openLightbox(this.src)">
+            <div class="image-name">flowers.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/frangipani-plumeria-cluster-digital-asset.png" alt="Illustration 28" onclick="openLightbox(this.src)">
+            <div class="image-name">frangipani-plumeria-cluster-digital-asset.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/garden.png" alt="Illustration 29" onclick="openLightbox(this.src)">
+            <div class="image-name">garden.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/golden-altar-inside-a-tibetan.png" alt="Illustration 30" onclick="openLightbox(this.src)">
+            <div class="image-name">golden-altar-inside-a-tibetan.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/himachal-pradesh-sacred-atmosphere-minimalist.png" alt="Illustration 31" onclick="openLightbox(this.src)">
+            <div class="image-name">himachal-pradesh-sacred-atmosphere-minimalist.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/incense-bundle-tied.png" alt="Illustration 32" onclick="openLightbox(this.src)">
+            <div class="image-name">incense-bundle-tied.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/jasmine-sprig-2.png" alt="Illustration 33" onclick="openLightbox(this.src)">
+            <div class="image-name">jasmine-sprig-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/jasmine-sprig.png" alt="Illustration 34" onclick="openLightbox(this.src)">
+            <div class="image-name">jasmine-sprig.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/khata-scarf.png" alt="Illustration 35" onclick="openLightbox(this.src)">
+            <div class="image-name">khata-scarf.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/library-shelf-dharma-books-digital-2.png" alt="Illustration 36" onclick="openLightbox(this.src)">
+            <div class="image-name">library-shelf-dharma-books-digital-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/library-shelf-dharma-books-digital.png" alt="Illustration 37" onclick="openLightbox(this.src)">
+            <div class="image-name">library-shelf-dharma-books-digital.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/lotus-patio.png" alt="Illustration 38" onclick="openLightbox(this.src)">
+            <div class="image-name">lotus-patio.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mala-prayer-beads.png" alt="Illustration 39" onclick="openLightbox(this.src)">
+            <div class="image-name">mala-prayer-beads.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-1.webp" alt="Illustration 40" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-1.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-2.webp" alt="Illustration 41" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-2.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-3.webp" alt="Illustration 42" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-3.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-4.webp" alt="Illustration 43" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-4.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-5.webp" alt="Illustration 44" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-5.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-marigold-detailed.webp" alt="Illustration 45" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-marigold-detailed.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mandala-marigold.webp" alt="Illustration 46" onclick="openLightbox(this.src)">
+            <div class="image-name">mandala-marigold.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/marigold-garland-single-loop-digital-2.png" alt="Illustration 47" onclick="openLightbox(this.src)">
+            <div class="image-name">marigold-garland-single-loop-digital-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/marigold-garland-single-loop-digital-3.png" alt="Illustration 48" onclick="openLightbox(this.src)">
+            <div class="image-name">marigold-garland-single-loop-digital-3.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/marigold-garland-single-loop-digital.png" alt="Illustration 49" onclick="openLightbox(this.src)">
+            <div class="image-name">marigold-garland-single-loop-digital.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/meditation-room-alt.webp" alt="Illustration 50" onclick="openLightbox(this.src)">
+            <div class="image-name">meditation-room-alt.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monastery-mountain-alt2.webp" alt="Illustration 51" onclick="openLightbox(this.src)">
+            <div class="image-name">monastery-mountain-alt2.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monastery-mountain.webp" alt="Illustration 52" onclick="openLightbox(this.src)">
+            <div class="image-name">monastery-mountain.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monastic%20education.png" alt="Illustration 53" onclick="openLightbox(this.src)">
+            <div class="image-name">monastic education.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monk-leaving-monastery.webp" alt="Illustration 54" onclick="openLightbox(this.src)">
+            <div class="image-name">monk-leaving-monastery.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monk-reading.webp" alt="Illustration 55" onclick="openLightbox(this.src)">
+            <div class="image-name">monk-reading.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/monks-in-maroon-robes-lighting.png" alt="Illustration 56" onclick="openLightbox(this.src)">
+            <div class="image-name">monks-in-maroon-robes-lighting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mountains-landscape.webp" alt="Illustration 57" onclick="openLightbox(this.src)">
+            <div class="image-name">mountains-landscape.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/mountains-sacred-2.webp" alt="Illustration 58" onclick="openLightbox(this.src)">
+            <div class="image-name">mountains-sacred-2.webp</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/museums.png" alt="Illustration 59" onclick="openLightbox(this.src)">
+            <div class="image-name">museums.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/nalanda-gate-miniature-digital-asset.png" alt="Illustration 60" onclick="openLightbox(this.src)">
+            <div class="image-name">nalanda-gate-miniature-digital-asset.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/nalanda-ruins-arch-2.png" alt="Illustration 61" onclick="openLightbox(this.src)">
+            <div class="image-name">nalanda-ruins-arch-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/nalanda-ruins-arch.png" alt="Illustration 62" onclick="openLightbox(this.src)">
+            <div class="image-name">nalanda-ruins-arch.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/nalanda-university-luxuriant-soft-lighting.png" alt="Illustration 63" onclick="openLightbox(this.src)">
+            <div class="image-name">nalanda-university-luxuriant-soft-lighting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/nature-and-culture-interwoven-a.png" alt="Illustration 64" onclick="openLightbox(this.src)">
+            <div class="image-name">nature-and-culture-interwoven-a.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/old-tibetan-buddhist-nunnery-white.png" alt="Illustration 65" onclick="openLightbox(this.src)">
+            <div class="image-name">old-tibetan-buddhist-nunnery-white.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/pecha-tibetan-scripture-wrapped-in.png" alt="Illustration 66" onclick="openLightbox(this.src)">
+            <div class="image-name">pecha-tibetan-scripture-wrapped-in.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/prayer-wheel.png" alt="Illustration 67" onclick="openLightbox(this.src)">
+            <div class="image-name">prayer-wheel.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/primula-denticulata.png" alt="Illustration 68" onclick="openLightbox(this.src)">
+            <div class="image-name">primula-denticulata.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/rosefinch-himalayan-male-digital-asset.png" alt="Illustration 69" onclick="openLightbox(this.src)">
+            <div class="image-name">rosefinch-himalayan-male-digital-asset.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sacred%20object.png" alt="Illustration 70" onclick="openLightbox(this.src)">
+            <div class="image-name">sacred object.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sacred%20person.png" alt="Illustration 71" onclick="openLightbox(this.src)">
+            <div class="image-name">sacred person.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sacred%20place.png" alt="Illustration 72" onclick="openLightbox(this.src)">
+            <div class="image-name">sacred place.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sacred-buddhist-pilgrimage-soft-lighting.png" alt="Illustration 73" onclick="openLightbox(this.src)">
+            <div class="image-name">sacred-buddhist-pilgrimage-soft-lighting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sarnath-bird-view-soft-lighting.png" alt="Illustration 74" onclick="openLightbox(this.src)">
+            <div class="image-name">sarnath-bird-view-soft-lighting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sarus-crane-standing-2.png" alt="Illustration 75" onclick="openLightbox(this.src)">
+            <div class="image-name">sarus-crane-standing-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sarus-crane-standing.png" alt="Illustration 76" onclick="openLightbox(this.src)">
+            <div class="image-name">sarus-crane-standing.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/small-remote-tibetan-monastery-library.png" alt="Illustration 77" onclick="openLightbox(this.src)">
+            <div class="image-name">small-remote-tibetan-monastery-library.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/sunflower-head-ar.png" alt="Illustration 78" onclick="openLightbox(this.src)">
+            <div class="image-name">sunflower-head-ar.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/the-glowing-moon-in-the-dark-space.png" alt="Illustration 79" onclick="openLightbox(this.src)">
+            <div class="image-name">the-glowing-moon-in-the-dark-space.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/tibetan-buddhist-art.png" alt="Illustration 80" onclick="openLightbox(this.src)">
+            <div class="image-name">tibetan-buddhist-art.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/tibetan-buddhist-monks-red-monastic.png" alt="Illustration 81" onclick="openLightbox(this.src)">
+            <div class="image-name">tibetan-buddhist-monks-red-monastic.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/tibetan-buddhist-pilgrimage-india-sacred.png" alt="Illustration 82" onclick="openLightbox(this.src)">
+            <div class="image-name">tibetan-buddhist-pilgrimage-india-sacred.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/vajra-dorje.png" alt="Illustration 83" onclick="openLightbox(this.src)">
+            <div class="image-name">vajra-dorje.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/varanasi-ganges-vibrant-sacred-atmosphere-2.png" alt="Illustration 84" onclick="openLightbox(this.src)">
+            <div class="image-name">varanasi-ganges-vibrant-sacred-atmosphere-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/varanasi-ganges-vibrant-sacred-atmosphere.png" alt="Illustration 85" onclick="openLightbox(this.src)">
+            <div class="image-name">varanasi-ganges-vibrant-sacred-atmosphere.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/varanasi-sacred-atmosphere-soft-lighting-2.png" alt="Illustration 86" onclick="openLightbox(this.src)">
+            <div class="image-name">varanasi-sacred-atmosphere-soft-lighting-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/varanasi-sacred-atmosphere-soft-lighting-3.png" alt="Illustration 87" onclick="openLightbox(this.src)">
+            <div class="image-name">varanasi-sacred-atmosphere-soft-lighting-3.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/varanasi-sacred-atmosphere-soft-lighting.png" alt="Illustration 88" onclick="openLightbox(this.src)">
+            <div class="image-name">varanasi-sacred-atmosphere-soft-lighting.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/vulture-peak-sacred-atmosphere-minimalist-2.png" alt="Illustration 89" onclick="openLightbox(this.src)">
+            <div class="image-name">vulture-peak-sacred-atmosphere-minimalist-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/vulture-peak-sacred-atmosphere-minimalist-3.png" alt="Illustration 90" onclick="openLightbox(this.src)">
+            <div class="image-name">vulture-peak-sacred-atmosphere-minimalist-3.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/vulture-peak-sacred-atmosphere-minimalist.png" alt="Illustration 91" onclick="openLightbox(this.src)">
+            <div class="image-name">vulture-peak-sacred-atmosphere-minimalist.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/white-khata-ceremonial-scarf-neatly-2.png" alt="Illustration 92" onclick="openLightbox(this.src)">
+            <div class="image-name">white-khata-ceremonial-scarf-neatly-2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="illustrations-full/white-khata-ceremonial-scarf-neatly.png" alt="Illustration 93" onclick="openLightbox(this.src)">
+            <div class="image-name">white-khata-ceremonial-scarf-neatly.png</div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" id="lightbox-img" alt="Image agrandie">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

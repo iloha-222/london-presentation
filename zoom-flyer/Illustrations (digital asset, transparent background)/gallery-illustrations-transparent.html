@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Illustrations Transparentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
+                        linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        .image-name {
+            padding: 15px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie Illustrations Transparentes</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/1.png" alt="Illustration 1" onclick="openLightbox(this.src)">
+            <div class="image-name">1.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/2.png" alt="Illustration 2" onclick="openLightbox(this.src)">
+            <div class="image-name">2.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/3.png" alt="Illustration 3" onclick="openLightbox(this.src)">
+            <div class="image-name">3.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/4.png" alt="Illustration 4" onclick="openLightbox(this.src)">
+            <div class="image-name">4.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/5.png" alt="Illustration 5" onclick="openLightbox(this.src)">
+            <div class="image-name">5.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/6.png" alt="Illustration 6" onclick="openLightbox(this.src)">
+            <div class="image-name">6.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/7.png" alt="Illustration 7" onclick="openLightbox(this.src)">
+            <div class="image-name">7.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/8.png" alt="Illustration 8" onclick="openLightbox(this.src)">
+            <div class="image-name">8.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/9.png" alt="Illustration 9" onclick="openLightbox(this.src)">
+            <div class="image-name">9.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/10.png" alt="Illustration 10" onclick="openLightbox(this.src)">
+            <div class="image-name">10.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/11.png" alt="Illustration 11" onclick="openLightbox(this.src)">
+            <div class="image-name">11.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/12.png" alt="Illustration 12" onclick="openLightbox(this.src)">
+            <div class="image-name">12.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/15.png" alt="Illustration 15" onclick="openLightbox(this.src)">
+            <div class="image-name">15.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/16.png" alt="Illustration 16" onclick="openLightbox(this.src)">
+            <div class="image-name">16.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/17.png" alt="Illustration 17" onclick="openLightbox(this.src)">
+            <div class="image-name">17.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/18.png" alt="Illustration 18" onclick="openLightbox(this.src)">
+            <div class="image-name">18.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/19.png" alt="Illustration 19" onclick="openLightbox(this.src)">
+            <div class="image-name">19.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/20.png" alt="Illustration 20" onclick="openLightbox(this.src)">
+            <div class="image-name">20.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/21.png" alt="Illustration 21" onclick="openLightbox(this.src)">
+            <div class="image-name">21.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/22.png" alt="Illustration 22" onclick="openLightbox(this.src)">
+            <div class="image-name">22.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/23.png" alt="Illustration 23" onclick="openLightbox(this.src)">
+            <div class="image-name">23.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/24.png" alt="Illustration 24" onclick="openLightbox(this.src)">
+            <div class="image-name">24.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/25.png" alt="Illustration 25" onclick="openLightbox(this.src)">
+            <div class="image-name">25.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/bridge.png" alt="Illustration Bridge" onclick="openLightbox(this.src)">
+            <div class="image-name">bridge.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/iloha_38848_Pile_of_books_and_small_tibetan_monastery_on_top_wh_723680fa-3f53-4b97-b9e2-002943b00619-Photoroom.png" alt="Illustration Monastery Books" onclick="openLightbox(this.src)">
+            <div class="image-name">iloha_38848_Pile_of_books_and_small_tibetan_monastery_on_top_wh_723680fa-3f53-4b97-b9e2-002943b00619-Photoroom.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/nunnery-alt-transparent.png" alt="Illustration Nunnery Alt" onclick="openLightbox(this.src)">
+            <div class="image-name">nunnery-alt-transparent.png</div>
+        </div>
+        <div class="gallery-item">
+            <img src="digital%20assets-transparent/nunnery-alt2-transparent.webp" alt="Illustration Nunnery Alt 2" onclick="openLightbox(this.src)">
+            <div class="image-name">nunnery-alt2-transparent.webp</div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" id="lightbox-img" alt="Image agrandie">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

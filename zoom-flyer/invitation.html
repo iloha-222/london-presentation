@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINI End of Year Tea Party - December 9, 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            color: #453c36;
+            background: #e5e5e5;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            position: relative;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        /* ========== PAGE 1 ========== */
+        .page-1 {
+            background: #f9f2e6;
+            padding: 18mm 20mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('illustrations (full illustrations, no transparent background)/illustrations-full/mandala-3.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+            z-index: 0;
+        }
+
+        .page-1-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 140mm;
+        }
+
+        .logo {
+            width: 28mm;
+            margin: 0 auto 8mm;
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2.5mm 7mm;
+            background: white;
+            border: 2px solid #f5b611;
+            border-radius: 30px;
+            margin-bottom: 7mm;
+        }
+
+        .badge-text {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 9pt;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #d45c26;
+        }
+
+        h1 {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 24pt;
+            color: #453c36;
+            line-height: 1.2;
+            margin-bottom: 4mm;
+        }
+
+        h2 {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 16pt;
+            color: #d45c26;
+            margin-bottom: 7mm;
+        }
+
+        .description {
+            font-size: 11pt;
+            color: #453c36;
+            line-height: 1.5;
+            margin-bottom: 12mm;
+        }
+
+        .zoom-pill {
+            display: inline-block;
+            background: #d45c26;
+            color: white;
+            padding: 4mm 12mm;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            font-size: 10pt;
+            margin-bottom: 8mm;
+            text-align: center;
+        }
+
+        .date-card {
+            background: white;
+            border: 2px solid #f5b611;
+            border-radius: 10px;
+            padding: 10mm;
+        }
+
+        .date-icon {
+            width: 16mm;
+            height: 16mm;
+            margin: 0 auto 6mm;
+            display: block;
+            filter: invert(58%) sepia(87%) saturate(457%) hue-rotate(358deg) brightness(102%) contrast(93%);
+        }
+
+        .date-main {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 16pt;
+            color: #453c36;
+            margin-bottom: 3mm;
+        }
+
+        .date-year {
+            font-size: 11pt;
+            color: #453c36;
+            opacity: 0.7;
+            margin-bottom: 8mm;
+        }
+
+        .timezone-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4mm;
+        }
+
+        .timezone-item {
+            background: #f9f2e6;
+            padding: 4mm 3mm;
+            border-radius: 6px;
+        }
+
+        .timezone-time {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 12pt;
+            color: #d45c26;
+            margin-bottom: 2mm;
+        }
+
+        .timezone-label {
+            font-size: 8pt;
+            color: #453c36;
+            opacity: 0.7;
+            line-height: 1.3;
+        }
+
+        /* ========== PAGE 2 ========== */
+        .page-2 {
+            background: #f9f2e6;
+            padding: 20mm;
+        }
+
+        .page-2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('illustrations (full illustrations, no transparent background)/illustrations-full/mandala-4.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+            z-index: 0;
+        }
+
+        .page-2-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 9pt;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #d45c26;
+            text-align: center;
+            margin-bottom: 5mm;
+        }
+
+        .section-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 22pt;
+            color: #453c36;
+            text-align: center;
+            margin-bottom: 12mm;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5mm;
+            margin-bottom: 12mm;
+        }
+
+        .detail-card {
+            background: white;
+            border: 2px solid #e0d5c5;
+            border-radius: 8px;
+            padding: 8mm 5mm;
+            text-align: center;
+        }
+
+        .detail-icon {
+            width: 14mm;
+            height: 14mm;
+            margin: 0 auto 5mm;
+            display: block;
+        }
+
+        .detail-card:nth-child(1) .detail-icon {
+            filter: invert(34%) sepia(61%) saturate(1095%) hue-rotate(338deg) brightness(95%) contrast(88%);
+        }
+
+        .detail-card:nth-child(2) .detail-icon {
+            filter: invert(58%) sepia(87%) saturate(457%) hue-rotate(358deg) brightness(102%) contrast(93%);
+        }
+
+        .detail-card:nth-child(3) .detail-icon {
+            filter: invert(87%) sepia(13%) saturate(1026%) hue-rotate(106deg) brightness(92%) contrast(92%);
+        }
+
+        .detail-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 10pt;
+            color: #453c36;
+            margin-bottom: 2mm;
+        }
+
+        .detail-text {
+            font-size: 9pt;
+            color: #453c36;
+            opacity: 0.8;
+            line-height: 1.3;
+        }
+
+        .message-box {
+            background: white;
+            border-radius: 10px;
+            padding: 0;
+            margin-bottom: 15mm;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            min-height: 60mm;
+            box-shadow: 0 2px 8px rgba(69, 60, 54, 0.08);
+        }
+
+        .message-illustration {
+            background-image: url('illustrations (full illustrations, no transparent background)/illustrations-full/a-tibetan-nunnery.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .message-content {
+            padding: 12mm 10mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .message-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 14pt;
+            color: #453c36;
+            margin-bottom: 5mm;
+        }
+
+        .message-text {
+            font-size: 9pt;
+            color: #453c36;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        .photo-section {
+            background: white;
+            border: 2px solid #f5b611;
+            border-radius: 10px;
+            padding: 10mm;
+            position: relative;
+        }
+
+        .action-badge {
+            display: inline-block;
+            background: #f5b611;
+            color: white;
+            padding: 2mm 6mm;
+            border-radius: 20px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 6mm;
+        }
+
+        .photo-content {
+            color: #453c36;
+        }
+
+        .photo-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 15pt;
+            color: #453c36;
+            margin-bottom: 5mm;
+        }
+
+        .photo-text {
+            font-size: 10pt;
+            color: #453c36;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .email-link {
+            color: #d45c26;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid #d45c26;
+        }
+
+        .email-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== PAGE 1 ========== -->
+    <div class="page page-1">
+        <div class="page-1-content">
+            <img src="icons/SINI orange.webp" alt="SINI Logo" class="logo">
+
+            <div class="badge">
+                <span class="badge-text">You're Invited</span>
+            </div>
+
+            <h1>End of Year<br>Tea Party</h1>
+            <h2>Building Bridges Together</h2>
+
+            <p class="description">
+                Join us for a special celebration as we come together to connect, share, and reflect. Many of us are connected to SINI in different spheres: this is our opportunity to meet and celebrate the wonderful team working on building bridges in so many ways.
+            </p>
+
+            <a href="https://us02web.zoom.us/j/81622023662?pwd=wbgaw1cRTT5CzLIbGjDKrXeCoeqEFC.1" class="zoom-pill">Join Zoom Meeting</a>
+
+            <div class="date-card">
+                <img src="icons/noun-calendar-4059053.svg" alt="Calendar" class="date-icon">
+                <div class="date-main">Tuesday, December 9th</div>
+                <div class="date-year">2026</div>
+                <div class="timezone-grid">
+                    <div class="timezone-item">
+                        <div class="timezone-time">8:30 PM</div>
+                        <div class="timezone-label">India Standard Time</div>
+                    </div>
+                    <div class="timezone-item">
+                        <div class="timezone-time">7:00 AM</div>
+                        <div class="timezone-label">Pacific Time</div>
+                    </div>
+                    <div class="timezone-item">
+                        <div class="timezone-time">4:00 PM</div>
+                        <div class="timezone-label">Central European</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PAGE 2 ========== -->
+    <div class="page page-2">
+        <div class="page-2-content">
+            <div class="section-header">What to Expect</div>
+            <h3 class="section-title">Program Details</h3>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <img src="icons/noun-alarm-clock-4059066.svg" alt="Duration" class="detail-icon">
+                    <div class="detail-title">Duration</div>
+                    <div class="detail-text">Approximately<br>1 hour</div>
+                </div>
+                <div class="detail-card">
+                    <img src="icons/noun-community-1772870.svg" alt="Community" class="detail-icon">
+                    <div class="detail-title">Breakout Rooms</div>
+                    <div class="detail-text">Small group conversations</div>
+                </div>
+                <div class="detail-card">
+                    <img src="icons/noun-partnership-7452040.svg" alt="Partnership" class="detail-icon">
+                    <div class="detail-title">Building Bridges</div>
+                    <div class="detail-text">Connect across<br>SINI's work</div>
+                </div>
+            </div>
+
+            <div class="message-box">
+                <div class="message-illustration"></div>
+                <div class="message-content">
+                    <div class="message-title">A Time to Connect & Celebrate</div>
+                    <p class="message-text">
+                        This gathering brings our international and Tibetan staff together to share stories and celebrate our meaningful work. We'll have time for introductions and reflecting on what gives us hope as we continue this important work of cultural preservation and education.
+                    </p>
+                </div>
+            </div>
+
+            <div class="photo-section">
+                <div class="action-badge">📸 Before the Meeting</div>
+                <div class="photo-content">
+                    <div class="photo-title">Share a Meaningful Moment</div>
+                    <p class="photo-text">
+                        Please share a photo from this past year that was meaningful or joyful to you. It can be anything: a moment from your work, a personal milestone, a beautiful scene, or something that brought you joy. We'll create a collage to share during our gathering. Send your photo to <a href="mailto:laurane.boulenger@sinibridge.org" class="email-link">laurane.boulenger@sinibridge.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
